@@ -43,6 +43,21 @@ function PriorityData({ orderprop }) {
     return acc;
   }, {});
 
+  const setPriorityName = (priority) => {
+    switch (parseInt(priority, 10)) {
+      case 1:
+        return 'Low';
+      case 2:
+        return 'Medium';
+      case 3:
+        return 'High';
+      case 4:
+        return 'Urgent';
+      case 0:
+        return 'No Priority';
+    }
+  }
+
   return (
     <div>
   <h2>Priority Data</h2>
@@ -50,7 +65,7 @@ function PriorityData({ orderprop }) {
   <div className="priority-groups">
     {Object.keys(groupedByPriority).map((priority) => (
       <div key={priority} className="priority-group">
-        <h3>Priority {priority}</h3>
+        <h3> {setPriorityName(priority)}</h3>
         <div className="cards-container">
           {groupedByPriority[priority].map((ticket) => (
             <Card
