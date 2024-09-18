@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 function Display() {
   const [tickets, setTickets] = useState([]);  
   const [loading, setLoading] = useState(true);
-
+ 
   useEffect(() => {
     fetch('https://api.quicksell.co/v1/internal/frontend-assignment')
       .then((response) => response.json())
@@ -12,7 +12,7 @@ function Display() {
         setLoading(false);
       })
       .catch((error) => {
-        console.error('Error fetching data:', error);
+        console.error('Error fetching:', error);
         setLoading(false);
       });
   }, []);
