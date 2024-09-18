@@ -1,21 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/Navbar.css';
 
-function Navbar({filterFunction, orderFunction}) {
-  const [filter, setFilter] = useState('Status');
-  const [order, setOrder] = useState('Priority');
- 
+function Navbar({ filterFunction, orderFunction }) {
+  const getInitialFilter = () => localStorage.getItem('filterprop') || 'Status';
+  const getInitialOrder = () => localStorage.getItem('orderprop') || 'Priority';
+
+  const [filter, setFilter] = useState(getInitialFilter);
+  const [order, setOrder] = useState(getInitialOrder);
+
   const handleFilterChange = (e) => {
     const newFilter = e.target.value;
     setFilter(newFilter);
     filterFunction(newFilter);
+    localStorage.setItem('filterprop', newFilter); 
   };
 
   const handleOrderChange = (e) => {
     const newOrder = e.target.value;
     setOrder(newOrder);
     orderFunction(newOrder);
+    localStorage.setItem('orderprop', newOrder); 
   };
+
+  useEffect(() => {
+    setFilter(getInitialFilter);
+    setOrder(getInitialOrder);
+  }, []);
 
   return (
     <nav className="navbar">
