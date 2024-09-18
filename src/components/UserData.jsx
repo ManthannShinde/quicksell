@@ -70,7 +70,7 @@ function UserData({ orderprop }) {
       <div className="user-groups">
         {Object.keys(groupedByUser).map((userName) => (
           <div key={userName} className="user-group">
-            <h3>{userName}</h3>
+            <h3>{userName} - {groupedByUser[userName].length}</h3>
             <div className="cards-container">
               {groupedByUser[userName].map((ticket) => (
                 <Card

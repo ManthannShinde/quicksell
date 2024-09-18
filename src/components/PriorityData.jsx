@@ -67,7 +67,7 @@ function PriorityData({ orderprop }) {
   <div className="priority-groups">
     {Object.keys(groupedByPriority).map((priority) => (
       <div key={priority} className="priority-group">
-        <h3> {setPriorityName(priority)}</h3>
+        <h3> {setPriorityName(priority)} - {groupedByPriority[priority].length}</h3>
         <div className="cards-container">
           {groupedByPriority[priority].map((ticket) => (
             <Card

@@ -63,7 +63,7 @@ function StatusData({ orderprop }) {
       <div className="status-groups">
         {Object.keys(groupedByStatus).map((status) => (
           <div key={status} className="status-group">
-            <h3>{status}</h3>
+            <h3>{status} - {groupedByStatus[status].length}</h3>
             <div className="cards-container">
               {groupedByStatus[status].map((ticket) => (
                 <Card
