@@ -6,7 +6,7 @@ function UserData({ orderprop }) {
   const [tickets, setTickets] = useState([]);
   const [users, setUsers] = useState([]);
   const [sortedTickets, setSortedTickets] = useState([]);
-  const [groupedByUser, setGroupedByUser] = useState([]);
+  const [groupedByUser, setGroupedByUser] = useState({});
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -49,6 +49,8 @@ function UserData({ orderprop }) {
         sorted.sort((a, b) => a.userName.localeCompare(b.userName));
       } else if (orderprop === 'Title') {
         sorted.sort((a, b) => a.title.localeCompare(b.title));
+      } else if (orderprop === 'Priority') {
+        sorted.sort((a, b) => b.priority - a.priority); // Descending order of priority
       }
 
       setSortedTickets(sorted);
