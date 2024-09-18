@@ -10,7 +10,7 @@ function Display() {
       .then((data) => {
         setTickets(data.tickets);  
         setLoading(false);
-      })
+      })  
       .catch((error) => {
         console.error('Error fetching data:', error);
         setLoading(false);

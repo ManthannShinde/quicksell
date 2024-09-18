@@ -24,6 +24,7 @@ function App() {
       {filterprop === 'Priority' && <PriorityData orderprop={orderprop} />}
       {filterprop === 'User' && <UserData orderprop={orderprop} />}
       {filterprop === 'Status' && <StatusData orderprop={orderprop} />}
+
     </div>
   );
 }

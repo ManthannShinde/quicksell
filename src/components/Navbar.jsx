@@ -6,15 +6,15 @@ function Navbar({filterFunction, orderFunction}) {
   const [order, setOrder] = useState('');
  
   const handleFilterChange = (e) => {
-    setFilter(e.target.value);
-    filterFunction(filter);
-    // console.log(e.target.value);
+    const newFilter = e.target.value;
+    setFilter(newFilter);
+    filterFunction(newFilter);
   };
 
   const handleOrderChange = (e) => {
-    setOrder(e.target.value);
-    orderFunction(order);
-    // console.log(e.target.value);
+    const newOrder = e.target.value;
+    setOrder(newOrder);
+    orderFunction(newOrder);
   };
 
   return (
