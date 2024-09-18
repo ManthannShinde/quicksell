@@ -58,7 +58,7 @@ function StatusData({ orderprop }) {
 
   return (
     <div>
-      <h2>Status Data</h2>
+      {/* <h2>Status Data</h2> */}
       {error && <p className="error-message">Error: {error}</p>}
       <div className="status-groups">
         {Object.keys(groupedByStatus).map((status) => (

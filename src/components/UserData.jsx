@@ -65,7 +65,7 @@ function UserData({ orderprop }) {
 
   return (
     <div>
-      <h2>User Data</h2>
+      {/* <h2>User Data</h2> */}
       {error && <p className="error-message">Error: {error}</p>}
       <div className="user-groups">
         {Object.keys(groupedByUser).map((userName) => (

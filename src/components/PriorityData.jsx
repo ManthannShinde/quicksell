@@ -60,7 +60,7 @@ function PriorityData({ orderprop }) {
 
   return (
     <div>
-  <h2>Priority Data</h2>
+  {/* <h2>Priority Data</h2> */}
   {error && <p className="error-message">Error: {error}</p>}
   <div className="priority-groups">
     {Object.keys(groupedByPriority).map((priority) => (

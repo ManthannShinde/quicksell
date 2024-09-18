@@ -28,7 +28,7 @@
   padding: 12px 24px;
   font-size: 16px;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 20px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -45,7 +45,7 @@
   background-color: #fff;
   min-width: 200px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-  border-radius: 4px;
+  border-radius: 20px;
   overflow: hidden;
   z-index: 1;
 }
@@ -54,7 +54,6 @@
   display: block;
 }
 
-/* Enhance nested dropdown appearance */
 .nested-dropdown {
   padding: 15px;
   display: flex;
@@ -77,11 +76,10 @@
   font-weight: 500;
 }
 
-/* Improve select element styling */
 .nested-dropdown select {
   padding: 8px 12px;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 20px;
   background-color: #fff;
   font-size: 14px;
   transition: border-color 0.3s ease;
