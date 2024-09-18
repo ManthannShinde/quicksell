@@ -26,7 +26,7 @@ function PriorityData({ orderprop }) {
     if (tickets.length > 0) {
       let sorted = [...tickets];
       if (orderprop === 'Priority') {
-        sorted.sort((a, b) => b.priority - a.priority); 
+        sorted.sort((a, b) => a.priority - b.priority); 
       } else if (orderprop === 'Title') {
         sorted.sort((a, b) => a.title.localeCompare(b.title)); 
       }
