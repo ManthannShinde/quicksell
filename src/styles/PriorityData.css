@@ -1,0 +1,30 @@
+.priority-groups {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden; 
+    white-space: nowrap; 
+    gap: 16px;
+    padding: 16px 0;
+  }
+  
+  .priority-group {
+    display: inline-block; 
+    width: calc(33.333% - 16px);
+    box-sizing: border-box;
+    margin-bottom: 16px;
+  }
+  
+  .cards-container {
+    display: flex;
+    flex-direction: column; 
+    gap: 16px; 
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  

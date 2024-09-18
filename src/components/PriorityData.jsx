@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Card from './Card'; 
+import '../styles/PriorityData.css';
 
 function PriorityData({ orderprop }) {
   const [tickets, setTickets] = useState([]);
@@ -44,28 +45,29 @@ function PriorityData({ orderprop }) {
 
   return (
     <div>
-      <h2>Priority Data</h2>
-      {error && <p className="error-message">Error: {error}</p>}
-      <div className="priority-groups">
-        {Object.keys(groupedByPriority).map((priority) => (
-          <div key={priority} className="priority-group">
-            <h3>Priority {priority}</h3>
-            <div className="cards-container">
-              {groupedByPriority[priority].map((ticket) => (
-                <Card
-                  key={ticket.id}
-                  id={ticket.id}
-                  title={ticket.title}
-                  tag={ticket.tag}
-                  status={ticket.status}
-                  priority={ticket.priority}
-                />
-              ))}
-            </div>
-          </div>
-        ))}
+  <h2>Priority Data</h2>
+  {error && <p className="error-message">Error: {error}</p>}
+  <div className="priority-groups">
+    {Object.keys(groupedByPriority).map((priority) => (
+      <div key={priority} className="priority-group">
+        <h3>Priority {priority}</h3>
+        <div className="cards-container">
+          {groupedByPriority[priority].map((ticket) => (
+            <Card
+              key={ticket.id}
+              id={ticket.id}
+              title={ticket.title}
+              tag={ticket.tag}
+              status={ticket.status}
+              priority={ticket.priority}
+            />
+          ))}
+        </div>
       </div>
-    </div>
+    ))}
+  </div>
+</div>
+
   );
 }
 

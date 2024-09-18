@@ -1,71 +1,82 @@
 .card {
-    width: 100%;
-    max-width: 400px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    font-family: Arial, sans-serif;
-  }
-  .card-content {
-    padding: 20px;
-  }
-  .card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
-  }
-  .card-title {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    margin: 0;
-  }
-  .badge {
-    background-color: #e6f4ea;
-    color: #1e8e3e;
-    font-size: 14px;
-    font-weight: bold;
-    padding: 4px 8px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-  }
-  .badge-dot {
-    width: 8px;
-    height: 8px;
-    background-color: #1e8e3e;
-    border-radius: 50%;
-    display: inline-block;
-    margin-right: 4px;
-  }
-  .card-subtitle {
-    font-size: 18px;
-    font-weight: 600;
-    color: #555;
-    margin: 0 0 12px 0;
-  }
-  .card-description {
-    font-size: 14px;
-    color: #666;
-    margin: 0;
-  }
-  .card-footer {
-    background-color: #f8f9fa;
-    padding: 12px 20px;
-  }
-  .feature-request {
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    color: #777;
-  }
-  .feature-dot {
-    width: 8px;
-    height: 8px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    margin-right: 8px;
-  }
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  font-size: 0.875rem;
+  width: 250px;
+  height: 100px; 
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.card-content {
+  flex: 1;
+  overflow: hidden;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.card-title {
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 12px;
+  font-size: 0.875rem;
+}
+
+.badge-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #333;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+.card-subtitle {
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-description {
+  font-size: 0.875rem;
+  margin: 8px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-footer {
+  margin-top: 8px;
+}
+
+.feature-request {
+  display: flex;
+  align-items: center;
+}
+
+.feature-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #333;
+  border-radius: 50%;
+  margin-right: 4px;
+}
