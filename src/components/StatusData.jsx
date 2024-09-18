@@ -4,7 +4,7 @@ function StatusData() {
   return (
     <div>
       status data
-    </div>
+    </div> 
   );
 }
 

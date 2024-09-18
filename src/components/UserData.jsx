@@ -4,7 +4,7 @@ function UserData() {
   return (
     <div>
       user data
-    </div>
+    </div> 
   );
 }
 

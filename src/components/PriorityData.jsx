@@ -5,7 +5,7 @@ function PriorityData() {
     <div>
       proirity data
     </div>
-  );
+  ); 
 }
 
 export default PriorityData;
