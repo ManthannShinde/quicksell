@@ -7,8 +7,9 @@
 
 .priority-groups {
   display: flex;
-  overflow-x: auto;
-  overflow-y: hidden;
+  justify-content: center;
+  /* overflow-x: auto; */
+  /* overflow-y: hidden; */
   white-space: nowrap;
   gap: 24px;
   padding: 24px 0;
@@ -18,7 +19,8 @@
 .priority-group {
   display: inline-block;
   width: calc(33.333% - 24px);
-  min-width: 300px;
+  width: 280px;
+  height: 175px;
   box-sizing: border-box;
   margin-bottom: 24px;
 }

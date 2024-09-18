@@ -3,6 +3,8 @@
     flex-wrap: nowrap; 
     overflow-x: auto; 
     gap: 16px;
+    margin: 20px;
+    justify-content: center;
   }
   
   .status-group {

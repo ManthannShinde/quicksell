@@ -1,7 +1,8 @@
 .user-groups {
     display: flex;
+    justify-content: center;
     flex-wrap: nowrap; 
-    overflow-x: auto; 
+    /* overflow-x: auto;  */
     gap: 16px;
   }
   
