@@ -1,0 +1,19 @@
+.status-groups {
+    display: flex;
+    flex-wrap: nowrap; 
+    overflow-x: auto; 
+    gap: 16px;
+  }
+  
+  .status-group {
+    flex: 0 0 auto; 
+    box-sizing: border-box;
+    margin-bottom: 16px;
+  }
+  
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
