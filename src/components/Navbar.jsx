@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import '../styles/Navbar.css';
 
 function Navbar({filterFunction, orderFunction}) {
-  const [filter, setFilter] = useState('');
-  const [order, setOrder] = useState('');
+  const [filter, setFilter] = useState('Status');
+  const [order, setOrder] = useState('Priority');
  
   const handleFilterChange = (e) => {
     const newFilter = e.target.value;

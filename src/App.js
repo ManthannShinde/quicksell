@@ -7,8 +7,8 @@ import StatusData from './components/StatusData';
 
 function App() {
 
-  const [filterprop, setFilterprop] = useState('');
-  const [orderprop, setOrderprop] = useState('');
+  const [filterprop, setFilterprop] = useState('Status');
+  const [orderprop, setOrderprop] = useState('Priority');
 
   const filterFunction = (filter) => {
     setFilterprop(filter);
