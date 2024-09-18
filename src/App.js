@@ -8,17 +8,22 @@ import StatusData from './components/StatusData';
 function App() {
 
   const [filterprop, setFilterprop] = useState('');
+  const [orderprop, setOrderprop] = useState('');
+
   const filterFunction = (filter) => {
     setFilterprop(filter);
+  }
+  const orderFunction = (order) => {
+    setOrderprop(order);
   }
 
   return (
     <div className="App"> 
-      <Navbar filterFunction={filterFunction} />
+      <Navbar filterFunction={filterFunction} orderFunction = {orderFunction}/>
      
-      {filterprop === 'Priority' && <PriorityData/>}
-      {filterprop === 'User' && <UserData/>}
-      {filterprop === 'Status' && <StatusData/>}
+      {filterprop === 'Priority' && <PriorityData orderprop={orderprop} />}
+      {filterprop === 'User' && <UserData orderprop={orderprop} />}
+      {filterprop === 'Status' && <StatusData orderprop={orderprop} />}
     </div>
   );
 }

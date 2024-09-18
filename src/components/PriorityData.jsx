@@ -1,9 +1,9 @@
 import React from 'react';
 
-function PriorityData() {
+function PriorityData({orderprop}) {
   return (
     <div>
-      proirity data
+      proirity data : {orderprop}
     </div>
   ); 
 }

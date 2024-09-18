@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
 import '../styles/Navbar.css';
 
-function Navbar({filterFunction}) {
+function Navbar({filterFunction, orderFunction}) {
   const [filter, setFilter] = useState('');
   const [order, setOrder] = useState('');
  
   const handleFilterChange = (e) => {
     setFilter(e.target.value);
+    filterFunction(filter);
     // console.log(e.target.value);
   };
 
   const handleOrderChange = (e) => {
     setOrder(e.target.value);
+    orderFunction(order);
     // console.log(e.target.value);
   };
-
-  filterFunction(filter);
 
   return (
     <nav className="navbar">

@@ -1,9 +1,9 @@
 import React from 'react';
 
-function StatusData() {
+function StatusData({orderprop}) {
   return (
     <div>
-      status data
+      status data : {orderprop}
     </div> 
   );
 }

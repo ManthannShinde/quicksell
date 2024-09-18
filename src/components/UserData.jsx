@@ -1,9 +1,9 @@
 import React from 'react';
 
-function UserData() {
+function UserData({orderprop}) {
   return (
     <div>
-      user data
+      user data : {orderprop}
     </div> 
   );
 }
