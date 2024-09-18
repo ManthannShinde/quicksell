@@ -12,17 +12,24 @@
 .card {
   border: 1px solid var(--card-border);
   border-radius: 20px;
-  padding: 16px;
+  padding: 8px 8px; 
   box-shadow: 0 4px 6px var(--card-shadow);
   background-color: var(--card-bg);
-  font-size: 0.875rem;
+  font-size: 0.75rem; 
+  line-height: 1.2; 
   width: 280px;
-  height: 175px;
+  height: 140px;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
+.card p, .card h3 {
+  margin: 0;
+  padding: 0; 
+}
+
 
 .card:hover {
   transform: translateY(-2px);
@@ -101,7 +108,7 @@
 
 .card-footer {
   margin-top: auto;
-  padding-top: 12px;
+  padding-top: 3px;
   border-top: 1px solid var(--card-border);
 }
 

@@ -17,9 +17,9 @@ function Card({ id, title, tag = [], status, priority }) {
         <h3 className="card-subtitle">
           {title}
         </h3>
-        <p className="card-description">
+        {/* <p className="card-description">
           Status: {status}
-        </p>
+        </p> */}
       </div>
       <div className="card-footer">
         <div className="feature-request">

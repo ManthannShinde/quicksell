@@ -55,6 +55,8 @@ function PriorityData({ orderprop }) {
         return 'Urgent';
       case 0:
         return 'No Priority';
+        default:
+          return 'NoPriority';
     }
   }
 
