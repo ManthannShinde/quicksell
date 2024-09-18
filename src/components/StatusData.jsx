@@ -4,7 +4,6 @@ import '../styles/StatusData.css';
 
 function StatusData({ orderprop }) {
   const [tickets, setTickets] = useState([]);
-  const [sortedTickets, setSortedTickets] = useState([]);
   const [groupedByStatus, setGroupedByStatus] = useState({});
   const [error, setError] = useState(null);
 
@@ -32,18 +31,14 @@ function StatusData({ orderprop }) {
       } else if (orderprop === 'Title') {
         sorted.sort((a, b) => a.title.localeCompare(b.title));
       } else if (orderprop === 'Priority') {
-        sorted.sort((a, b) => b.priority - a.priority); // Descending order of priority
+        sorted.sort((a, b) => b.priority - a.priority);
       }
 
-      setSortedTickets(sorted);
-
-      // Group tickets by status
       const grouped = sorted.reduce((acc, ticket) => {
         (acc[ticket.status] = acc[ticket.status] || []).push(ticket);
         return acc;
       }, {});
 
-      // Convert grouped object to array and sort by status
       const sortedGroupedByStatus = Object.keys(grouped)
         .sort()
         .reduce((acc, status) => {
@@ -51,7 +46,6 @@ function StatusData({ orderprop }) {
           return acc;
         }, {});
 
-      // If sorting by priority, ensure it's sorted within each status group
       if (orderprop === 'Priority') {
         Object.keys(sortedGroupedByStatus).forEach((status) => {
           sortedGroupedByStatus[status] = sortedGroupedByStatus[status].sort((a, b) => b.priority - a.priority);
