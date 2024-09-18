@@ -1,58 +1,116 @@
+/* Base styles for the navbar */
 .navbar {
-    background-color: #f8f9fa;
-    padding: 10px;
-    font-family: Arial, sans-serif;
-  }
+  background-color: #f8f9fa;
+  padding: 10px 40px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
 
+/* Reset list styles and improve spacing */
+.navbar-nav {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Improve spacing and alignment of nav items */
+.nav-item {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+/* Enhanced button styling */
+.dropbtn {
+  background-color: #fff;
+  color: #333;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dropbtn:hover {
+  background-color: #f0f0f0;
+  border-color: #bbb;
+}
+
+/* Improved dropdown styling */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.nav-item:hover .dropdown-content {
+  display: block;
+}
+
+/* Enhance nested dropdown appearance */
+.nested-dropdown {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.3s ease;
+}
+
+.nested-dropdown:last-child {
+  border-bottom: none;
+}
+
+.nested-dropdown:hover {
+  background-color: #f8f9fa;
+}
+
+.nested-dropdown span {
+  margin-right: 15px;
+  font-weight: 500;
+}
+
+/* Improve select element styling */
+.nested-dropdown select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.nested-dropdown select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
   .navbar-nav {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+    flex-direction: column;
   }
-
+  
   .nav-item {
-    /* display: inline-block; */
-    float: left;
+    width: 100%;
+    margin-right: 0;
   }
   
-
   .dropbtn {
-    background-color: #fff;
-    color: #333;
-    padding: 10px 20px;  /* Increased right and left padding */
-    font-size: 16px;
-    border: 1px solid #ddd;
-    cursor: pointer;
-    width: auto; /* Ensure button fits content */
+    width: 100%;
+    text-align: left;
   }
   
-
   .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    position: static;
+    width: 100%;
+    box-shadow: none;
   }
-
-  .nav-item:hover .dropdown-content {
-    display: block;
-  }
-
-  .nested-dropdown {
-    padding: 12px 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .nested-dropdown span {
-    margin-right: 10px;
-  }
-
-  .nested-dropdown select {
-    padding: 5px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
+}
